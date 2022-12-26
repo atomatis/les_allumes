@@ -9,11 +9,18 @@
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
 
+
+        <link href="{{ asset('css/reset.css') }}" rel="stylesheet"/>
+
+
+
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <header>{% block header %}{% endblock %}</header>
+        <main>{% block content %}<p>kiki</p>{% endblock %}</main>
+        <footer>{% block footer %}{% endblock %}</footer>
     </body>
 </html>

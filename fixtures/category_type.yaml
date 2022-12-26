@@ -1,0 +1,3 @@
+App\Entity\CategoryType:
+  category_type_{1..10}:
+    name: un_nom_de_category_type_<current()>
