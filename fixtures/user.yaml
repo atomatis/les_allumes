@@ -1,0 +1,11 @@
+App\Entity\User:
+  user_admin:
+    email: admin@mail.com
+    password: <generatePassword('mdp')>
+    roles: ['ROLE_ADMIN']
+    active: true
+  user_base:
+    email: user@mail.com
+    password: <generatePassword('mdp')>
+    roles: ['ROLE_USER']
+    active: true

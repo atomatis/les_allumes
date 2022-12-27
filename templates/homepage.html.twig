@@ -1,6 +1,8 @@
 {% extends 'base.html.twig' %}
 
-{# On surrcharge la partie du block body du template base.html.twig #}
 {% block content %}
     <p>Yo!</p>
+    {% if is_granted('ROLE_ADMIN') %}
+        <a href="{{ path('app_admin_dashboard') }}">Admin dashboard</a>
+    {% endif %}
 {% endblock %}

@@ -9,11 +9,12 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /** @author Alexandre Tomatis <alexandre.tomatis@gmail.com> */
-final class HomepageAction extends AbstractController
+final class AdminController extends AbstractController
 {
-    #[Route('/', name:'app_homepage', methods: ['GET'])]
+    #[Route('/admin/dashboard', name: 'app_admin_dashboard')]
     public function __invoke(): Response
     {
-        return $this->render('homepage.html.twig');
+
+        return $this->render('admin/dashboard.html.twig');
     }
 }

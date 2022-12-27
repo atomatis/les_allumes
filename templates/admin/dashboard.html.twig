@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h2>Admin Dashboard</h2>
+    <ul>
+        <li><a href="{{ path('app_admin_read_category') }}">Catégories</a></li>
+    </ul>
+    <a href="{{ path('app_homepage') }}">Retour</a>
+{% endblock %}
