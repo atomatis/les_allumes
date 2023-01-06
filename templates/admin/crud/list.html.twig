@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('css/crud.css') }}" rel="stylesheet"/>
+{% endblock %}
+
+{% block content %}
+    <a href="{{ path('app_admin_create_' ~ entityName) }}">Ajouter une nouvelle cagtégorie</a>
+    <ul>
+        {% for entity in entities %}
+            <li class="crud_table">
+                <div><p>{{ entity.name }}</p></div>
+                <div class="crud_action_update"><a href="{{ path('app_admin_update_' ~ entityName, {id: entity.id}) }}">Modifier</a></div>
+                <div class="crud_action_delete"><a href="{{ path('app_admin_delete_' ~ entityName, {id: entity.id}) }}">Supprimer</a></div>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

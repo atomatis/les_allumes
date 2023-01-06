@@ -1,0 +1,39 @@
+header {
+    width: 90%;
+    height: 64px;
+    padding: 24px 5%;
+    background-color: #ffffff;
+    border-bottom: 1px solid rebeccapurple;
+    margin-bottom: 50px;
+}
+
+header h1 {
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    width: min-content;
+    float: left;
+}
+
+header h1 img{
+    width: 50px;
+}
+
+.profile-box {
+    float: right;
+    display: block;
+    padding: 10px 10px;
+    background-color: mediumpurple;
+    border: 1px solid rebeccapurple;
+    border-radius: 10px;
+    color: #ffffff;
+}
+
+.profile-box a {
+    color: #ffffff;
+}
+
+.profile-box a:hover {
+    color: pink;
+}

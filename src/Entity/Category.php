@@ -10,7 +10,7 @@ use App\Repository\CategoryRepository;
 
 /** @author Alexandre Tomatis <alexandre.tomatis@gmail.com> */
 #[ORM\Entity(repositoryClass: CategoryRepository::class)]
-class Category
+class Category implements CrudInterface
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -23,6 +23,11 @@ class Category
     #[ORM\ManyToOne(targetEntity: CategoryType::class)]
     #[ORM\OrderBy(['name'])]
     private CategoryType $categoryType;
+
+    public static function getEntityName(): string
+    {
+        return 'category';
+    }
 
     public function getId(): int
     {

@@ -1,0 +1,19 @@
+.crud_table {
+    display: flex;
+    flex-direction: row;
+}
+
+.crud_table div {
+    flex: auto;
+    border: 1px solid #e0e0e0;
+}
+
+.crud_table .crud_action_update {
+    flex: initial;
+    width: 100px;
+}
+
+.crud_table .crud_action_delete {
+    flex: initial;
+    width: 100px;
+}

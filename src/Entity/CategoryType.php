@@ -9,7 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /** @author Alexandre Tomatis <alexandre.tomatis@gmail.com> */
 #[ORM\Entity]
-class CategoryType
+class CategoryType implements CrudInterface
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -18,6 +18,11 @@ class CategoryType
 
     #[ORM\Column(type: Types::STRING)]
     private string $name;
+
+    public static function getEntityName(): string
+    {
+        return 'category_type';
+    }
 
     public function getId(): int
     {

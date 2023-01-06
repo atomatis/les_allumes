@@ -1,0 +1,49 @@
+h1, h2, h3, h4, h5 {
+    font-family: "Helvetica Neue", sans-serif;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    line-height: 35px;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    background-color: #f8fafe;
+    font-size: 0.875rem;
+}
+
+/** content **/
+
+main {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    min-width: 960px;
+}
+
+.content {
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: rgba(46, 56, 77, 0.1) -2px 5px 19px 0;
+    height: 100%;
+    padding: 16px;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    margin-left: -54px;
+}
+
+.title a {
+    margin-right: 20px;
+}
+
+.title img {
+    height: 37px;
+}
+
+/** fast css **/

@@ -11,9 +11,13 @@ use Symfony\Component\Routing\Annotation\Route;
 /** @author Alexandre Tomatis <alexandre.tomatis@gmail.com> */
 final class HomepageAction extends AbstractController
 {
-    #[Route('/', name:'app_homepage', methods: ['GET'])]
+    const ROUTE_HOMEPAGE = 'app_homepage';
+
+    #[Route('/', name: self::ROUTE_HOMEPAGE, methods: ['GET'])]
     public function __invoke(): Response
     {
-        return $this->render('homepage.html.twig');
+        return $this->render('homepage.html.twig', [
+            'pageTitle' => 'Bienvenue',
+        ]);
     }
 }

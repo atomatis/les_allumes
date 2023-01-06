@@ -1,11 +1,14 @@
 {% block header %}
     <header>
-        <h1>Lampe</h1>
+        <h1><img src="{{ asset('images/title_logo.png') }}" alt="TODO"></h1>
         <div class="profile-box">
             {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
-                <a href="{{ path('app_logout') }}">logout</a>
+                {% if is_granted('ROLE_ADMIN') %}
+                    <a href="{{ path('app_admin_dashboard') }}">Admin dashboard</a>
+                {% endif %}
+                <a href="{{ path('app_logout') }}">Se deconnecter</a>
             {% else %}
-                <a href="{{ path('app_login') }}">Login</a>
+                <a href="{{ path('app_login') }}">Se connecter</a>
             {% endif %}
         </div>
     </header>
